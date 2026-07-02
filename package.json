@@ -1,0 +1,65 @@
+{
+  "name": "@jackerhack/quartz5-plugin-pubignore",
+  "version": "1.0.0",
+  "description": "Quartz v5 confidentiality filter: reads a .pubignore file from the content root and withholds matching paths (markdown and assets) from the build.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Kiran Jonnalagadda",
+  "homepage": "https://github.com/jace/quartz5-plugin-pubignore#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jace/quartz5-plugin-pubignore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jace/quartz5-plugin-pubignore/issues"
+  },
+  "keywords": [
+    "quartz",
+    "quartz-plugin",
+    "quartz-community",
+    "pubignore",
+    "publish",
+    "confidentiality",
+    "filter",
+    "gitignore",
+    "obsidian"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "globby": "*"
+  },
+  "devDependencies": {
+    "@quartz-community/types": "github:quartz-community/types",
+    "globby": "^16.1.0",
+    "typescript": "^5.9.3"
+  },
+  "quartz": {
+    "name": "pubignore",
+    "displayName": "Pubignore",
+    "category": "filter",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "requiresInstall": false,
+    "dependencies": [],
+    "defaultOrder": 40,
+    "defaultEnabled": true
+  }
+}
