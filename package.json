@@ -41,15 +41,18 @@
     "LICENSE"
   ],
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "peerDependencies": {
     "globby": "*"
   },
   "devDependencies": {
     "@quartz-community/types": "github:quartz-community/types",
+    "@types/node": "^24.10.0",
     "globby": "^16.1.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
   },
   "quartz": {
     "name": "pubignore",

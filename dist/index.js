@@ -34,7 +34,8 @@ function initForBuild(ctx) {
 
   let kept = null
   if (fs.existsSync(pubignorePath)) {
-    const patterns = ctx.cfg.configuration.ignorePatterns
+    const config = ctx.cfg.configuration
+    const patterns = (config.ignorePatterns ??= [])
     const existing = new Set(patterns)
     for (const p of readPatterns(pubignorePath)) {
       if (!existing.has(p)) {
